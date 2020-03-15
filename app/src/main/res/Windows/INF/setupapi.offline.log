@@ -1,0 +1,50 @@
+[Device Install Log]
+     OS Version = 10.0.17134
+     Service Pack = 0.0
+     Suite = 0x0100
+     ProductType = 1
+     Architecture = amd64
+
+[BeginLog]
+
+[Boot Session: 2018/07/11 16:06:41.494]
+
+>>>  [Load Offline Registry Hive - SYSTEM]
+>>>  Section start 2018/07/17 08:13:19.007
+       os: Version = 10.0.17134, Service Pack = 0.0, Suite = 0x0100, ProductType = 1, Architecture = amd64
+      cmd: C:\Users\Rain\AppData\Local\Temp\BC64C605-E998-41CC-B834-27A4B8FD9A8D\dismhost.exe {DF409AB5-CB08-47B6-9776-C012900B5AA5}
+     sto: Opened existing hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/SYSTEM'.
+<<<  Section end 2018/07/17 08:13:19.007
+<<<  [Exit status: SUCCESS]
+
+
+>>>  [Load Offline Registry Hive - DRIVERS]
+>>>  Section start 2018/07/17 08:13:19.008
+       os: Version = 10.0.17134, Service Pack = 0.0, Suite = 0x0100, ProductType = 1, Architecture = amd64
+      cmd: C:\Users\Rain\AppData\Local\Temp\BC64C605-E998-41CC-B834-27A4B8FD9A8D\dismhost.exe {DF409AB5-CB08-47B6-9776-C012900B5AA5}
+     sto: Loaded hive 'C:\WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52\Windows\System32\config\DRIVERS'. Time = 93 ms
+     sto: Opened hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/DRIVERS'.
+     sto: Delay unloading hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/DRIVERS'.
+<<<  Section end 2018/07/17 08:13:19.103
+<<<  [Exit status: SUCCESS]
+
+
+>>>  [Unload Offline Registry Hive - SYSTEM]
+>>>  Section start 2018/07/17 08:13:19.237
+       os: Version = 10.0.17134, Service Pack = 0.0, Suite = 0x0100, ProductType = 1, Architecture = amd64
+      cmd: C:\Users\Rain\AppData\Local\Temp\BC64C605-E998-41CC-B834-27A4B8FD9A8D\dismhost.exe {DF409AB5-CB08-47B6-9776-C012900B5AA5}
+     sto: Closed hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/SYSTEM'.
+     sto: Unable to unload hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/SYSTEM' loaded by another process. Error = 0x00000005, Time = 0 ms
+<<<  Section end 2018/07/17 08:13:19.238
+<<<  [Exit status: SUCCESS]
+
+
+>>>  [Unload Offline Registry Hive - DRIVERS]
+>>>  Section start 2018/07/17 08:13:19.238
+       os: Version = 10.0.17134, Service Pack = 0.0, Suite = 0x0100, ProductType = 1, Architecture = amd64
+      cmd: C:\Users\Rain\AppData\Local\Temp\BC64C605-E998-41CC-B834-27A4B8FD9A8D\dismhost.exe {DF409AB5-CB08-47B6-9776-C012900B5AA5}
+     sto: Closed hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/DRIVERS'.
+     sto: Unloaded hive key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}C:/WinToolkit_Mount_DC8BE93447521510C08A41658E5DBF52/Windows/System32/config/DRIVERS'. Time = 0 ms
+<<<  Section end 2018/07/17 08:13:19.388
+<<<  [Exit status: SUCCESS]
+

@@ -1,0 +1,145 @@
+;---------------------------------------------------------------------
+; Apkbfiltr.inf
+;
+; Alps Pointing-device Driver for Windows Installation
+; Copyright(C) 1999-2015 Alps Electric Co., Ltd.
+;---------------------------------------------------------------------
+
+[Version]
+Signature="$Windows NT$"
+Provider=%Provider%
+ClassGUID={4D36E96B-E325-11CE-BFC1-08002BE10318}
+Class=Keyboard
+CatalogFile=Apkbfiltr.cat
+
+DriverVer=07/20/2015, 1.0.0.2
+
+[DestinationDirs]
+DefaultDestDir   = 12
+kbfiltr_CoInstaller_CopyFiles = 11
+
+;
+; Driver information
+;
+
+[Manufacturer]
+%Mfg.Desc%   = CompanyMfg,NTAMD64
+
+; For Win2K
+[CompanyMfg]
+; Not support
+
+; For XP and above
+[CompanyMfg.NTAMD64]
+%kbfiltr.DevDesc% = kbfiltr,ACPI\IDEA0100,*IDEA0100
+%kbfiltr.DevDesc% = kbfiltr,ACPI\IDEA0102,*IDEA0102
+%kbfiltr.DevDesc% = kbfiltr,ACPI\MSFT0001,*MSFT0001
+%kbfiltr.DevDesc% = kbfiltr,ACPI\ALPS0000,*ALPS0000
+
+;
+; General installation section
+;
+
+[kbfiltr.NT]
+; perform port related actions from keyboard.inf
+Include=keyboard.inf
+Needs=STANDARD_Inst
+
+; Copy the driver over
+CopyFiles=kbfiltr.CopyFiles
+
+
+;
+; File sections
+;
+
+[kbfiltr.CopyFiles]
+Apkbfiltr.sys
+
+
+;
+; Service Installation
+;
+
+[kbfiltr.NT.Services]
+AddService = ApkbfiltrService,  , kbfiltr_Service_Inst
+; Install the port driver and mouclass from keyboard.inf
+Include=keyboard.inf
+Needs=STANDARD_Inst.Services
+
+[kbfiltr_Service_Inst]
+DisplayName    = %kbfiltr.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Keyboard Port
+ServiceBinary  = %12%\Apkbfiltr.sys
+
+[kbfiltr.NT.HW]
+; Add the device upper filter
+AddReg = kbfiltr.HW.AddReg
+
+; run the directives need by the port driver
+Include=keyboard.inf
+Needs=STANDARD_Inst.HW
+
+[kbfiltr.HW.AddReg]
+HKR,,"UpperFilters",0x00010000,"ApkbfiltrService"
+
+
+;
+; Source file information
+;
+
+
+[SourceDisksNames]
+1 = %DiskId1%,,,
+
+[SourceDisksFiles]
+Apkbfiltr.sys = 1,,
+
+;
+;--- kbfiltr Coinstaller installation ------
+;
+
+[kbfiltr.NT.CoInstallers]
+AddReg=kbfiltr_CoInstaller_AddReg
+CopyFiles=kbfiltr_CoInstaller_CopyFiles
+
+[kbfiltr_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01005.dll,WdfCoInstaller"
+
+[kbfiltr_CoInstaller_CopyFiles]
+wdfcoinstaller01005.dll
+
+[SourceDisksFiles]
+wdfcoinstaller01005.dll=1 ; make sure the number matches with SourceDisksNames
+
+[kbfiltr.NT.Wdf]
+KmdfService = ApkbfiltrService, kbfiltr_wdfsect
+[kbfiltr_wdfsect]
+KmdfLibraryVersion = 1.5
+
+
+
+[Strings]
+
+;
+; Non-Localizable Strings
+;
+
+REG_SZ         = 0x00000000
+REG_MULTI_SZ   = 0x00010000
+REG_EXPAND_SZ  = 0x00020000
+REG_BINARY     = 0x00000001
+REG_DWORD      = 0x00010001
+SERVICEROOT    = "System\CurrentControlSet\Services"
+
+;
+; Localizable Strings
+;
+Provider = "Alps"
+DiskId1 = "Alps Keyboard Filter"
+Mfg.Desc="Alps Electric"
+kbfiltr.DevDesc="Lenovo Keyboard Device"
+kbfiltr.SvcDesc="Alps Keyboard Filter"

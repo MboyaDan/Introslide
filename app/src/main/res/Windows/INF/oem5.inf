@@ -1,0 +1,100 @@
+;
+;
+;Copyright (c) Intel Corporation.  All rights reserved.
+;
+;    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+;    KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+;    IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+;    PURPOSE.
+;
+;Module Name:
+;
+; XtuAcpiDriver.inf
+;
+;Abstract:
+;
+;    INF file for ACPI read/write to the BIOS as well as real-time device control.
+;    This is a mutlios INF file. Same INF file cab be used on
+;    x86, ia64 and amd64 platforms.
+;
+;=============================================================================
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System 
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+CatalogFile=XtuAcpiDriver.cat
+DriverVer=06/22/2015,5.0.0.0
+
+[DestinationDirs]
+DefaultDestDir = 12
+XtuAcpiDriver_Device_CoInstaller_CopyFiles = 11
+
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+XtuAcpiDriver.sys  = 1,,
+WdfCoInstaller01011.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=IntelDevice,NTamd64
+
+[IntelDevice.NTamd64]
+%XtuAcpiDriver.DeviceDesc%=XtuAcpiDriver_Device, ACPI\INT3394
+
+
+[XtuAcpiDriver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+XtuAcpiDriver.sys
+
+;-------------- Service installation
+[XtuAcpiDriver_Device.NT.Services]
+AddService = XtuAcpiDriver,%SPSVCINST_ASSOCSERVICE%, XtuAcpiDriver_Service_Inst
+
+; -------------- XtuAcpiDriver driver install sections
+[XtuAcpiDriver_Service_Inst]
+DisplayName    = %XtuAcpiDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\XtuAcpiDriver.sys
+LoadOrderGroup = Extended Base
+
+;
+;--- XtuAcpiDriver_Device Coinstaller installation ------
+;
+
+
+[XtuAcpiDriver_Device.NT.CoInstallers]
+AddReg=XtuAcpiDriver_Device_CoInstaller_AddReg
+CopyFiles=XtuAcpiDriver_Device_CoInstaller_CopyFiles
+
+[XtuAcpiDriver_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01011.dll,WdfCoInstaller"
+
+[XtuAcpiDriver_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01011.dll
+
+
+
+[XtuAcpiDriver_Device.NT.Wdf]
+KmdfService =  XtuAcpiDriver, XtuAcpiDriver_wdfsect
+[XtuAcpiDriver_wdfsect]
+KmdfLibraryVersion = 1.11
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Intel" ; TODO: add ManufacturerName
+DiskName = "ACPI and BIOS Control"
+XtuAcpiDriver.DeviceDesc = "Intel(R) Extreme Tuning Utility Device Driver"
+XtuAcpiDriver.SVCDESC = "Intel(R) Extreme Tuning Utility Device Driver"

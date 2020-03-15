@@ -1,0 +1,1354 @@
+﻿;============================================================================ 
+; Installation file (.inf) for Windows 7/8/8.1/10.
+;
+; All Rights Reserved, Copyright(C) ELAN Microelectronics Corp. 2003-2015
+;============================================================================
+
+[Version]
+Signature="$Windows NT$"
+Provider=%VenderName%
+ClassGUID={4D36E96F-E325-11CE-BFC1-08002BE10318}
+Class=Mouse
+CatalogFile=ETD.cat
+DriverVer=03/08/2017, 11.4.104.3
+
+[SourceDisksNames]
+1=%DiskName%,,
+
+[SourceDisksFiles]
+ETD.inf = 1
+ETD.sys = 1
+ETDCoInstaller15015.dll = 1
+ETDCtrl.exe = 1
+ETDApix.dll = 1
+ETDCmds.dll = 1
+ETDUninst.dll = 1
+ETDUn_inst.exe = 1
+ETDMcpl.dll = 1
+ETDApi.dll = 1
+ETDFavorite.dll = 1
+;ETDFingerPositioner.exe = 1 
+;ETDHValueMonitor.exe = 1
+ETDDeviceInformation.exe = 1
+ETDCtrlHelper.exe = 1
+ETDApi32.dll = 1
+ETD_DLL.dll = 1
+ETDSetup.ini = 1
+ETDAniConf.exe = 1
+Button_ClickPad.avi = 1
+Button_SmartPad.avi = 1
+DnD01.avi = 1
+DnD02.avi = 1
+DnD03.avi = 1
+Edge_Auto.avi = 1
+Edge_Inertial.avi = 1
+Edge_Scroll.avi = 1
+Rotation_Twist.avi = 1
+Rotation_Clockwise.avi = 1
+Scroll_Auto.avi = 1
+Scroll_Inertial.avi = 1
+Scroll_No_FreeScroll.avi = 1
+Swipe_3F_LR_PageupDown.avi = 1
+Swipe_3F_UpDown_SlideShow.avi = 1
+Tapping_1F.avi = 1
+Zooming.avi = 1
+Press_3F.avi = 1
+Continuous_EdgeScroll_H.avi = 1
+Continuous_EdgeScroll_V.avi = 1
+Continuous_Scroll_V_2F.avi = 1
+Continuous_Scroll_H_2F.avi = 1
+ETDIntelligent.exe = 1
+Lenovo.exe = 1
+Lenovo_Win8.exe = 1
+Scroll_Reverse_V.avi = 1
+Scroll_Reverse_H.avi = 1
+Edge_Reverse_V.avi = 1
+Edge_Reverse_H.avi = 1
+Win8EdgeSwipe_Left.avi = 1
+Win8EdgeSwipe_Right.avi = 1
+Win8EdgeSwipe_Top.avi = 1
+ETDService.exe = 1
+Continuous_EdgeScroll_Reverse-H.avi = 1
+Continuous_EdgeScroll_Reverse-V.avi = 1
+Continuous_Scroll_Reverse-H_2F.avi = 1
+Continuous_Scroll_Reverse-V_2F.avi = 1
+Edge_Auto_Reverse.avi = 1
+Edge_Inertial_Reverse.avi = 1
+Scroll_Auto_Reverse.avi = 1
+Scroll_Inertial_Reverse.avi = 1
+PTP_Swipe_3F_Up_Down_Left_Right.avi = 1
+PTP_Tapping_3F_Cortana.avi = 1
+PTP_Tapping_4F_Notification_Center.avi = 1
+ETDTouch.exe = 1
+LenovoAPI.dll = 1
+ETDSMBus.ini = 1
+ETDSMBus.sys = 1
+TouchpadEnableDisable.exe = 1
+WdfCoInstaller01011.dll = 1
+
+;----------------------------------------------------------------------------
+; Manufacturer Sections
+;----------------------------------------------------------------------------
+
+[Manufacturer]
+%VenderName%   = ELAN.Mfg, NTamd64, NTamd64.6.2, NTamd64.6.3, NTamd64.10.0 
+
+[ELAN.Mfg.NTamd64]
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0000
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0613						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060D						; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060E						; SmartPad for Pegatron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0623 						; SmartPad for LCFC S8442D-71H3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0624						; SmartPad for LCFC SA050D-77H5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062D						; v5.5 spec for Win7 (Z40-75) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062E						; v5.5 spec for Win7 (Z50-75) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062F						; v5.5 spec for Win7 (ZIWBx14) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0630						; v5.5 spec for Win7 (ZIWBx 14/15) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0631						; v5.5 spec for Win7 (Wistron Carrera) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0627
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0637						; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0657						; Nano110 
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0680						; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%ThinkPadDeviceDesc% 		= ETD_DUALMODE_Inst, *LEN0040						; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0613						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062F						; SmartPad for Compal v5.5 ZIWBx 14/ZIWBx 15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0630
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060D			    			; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060E						; SmartPad for Pegetron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0623						; SmartPad for LCFC S8442D-71H3 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062D
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0624						; SmartPad for LCFC SA050D-77H5 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062E
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0627						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0631
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0637 					; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0657						; Nano110 
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0680						; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%ThinkPadDeviceDesc% 		= ETD_DUALMODE_Inst, ACPI\LEN0040					; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+[ELAN.Mfg.NTamd64.6.2]
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0000
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0613						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060D						; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060E						; SmartPad for Pegatron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0623 						; SmartPad for LCFC S8442D-71H3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0624						; SmartPad for LCFC SA050D-77H5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062D						; v5.5 spec for Win7 (Z40-75) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062E						; v5.5 spec for Win7 (Z50-75) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062F						; v5.5 spec for Win7 (ZIWBx14) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0630						; v5.5 spec for Win7 (ZIWBx 14/15) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0631						; v5.5 spec for Win7 (Wistron Carrera) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0627
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0637						; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0657						; Nano110 
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0680						; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%ThinkPadDeviceDesc% 		= ETD_DUALMODE_Inst, *LEN0040						; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0613						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062F						; SmartPad for Compal v5.5 ZIWBx 14/ZIWBx 15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0630
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060D			    			; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060E						; SmartPad for Pegetron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0623						; SmartPad for LCFC S8442D-71H3 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062D
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0624						; SmartPad for LCFC SA050D-77H5 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062E
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0627						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0631
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0637 					; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0657						; Nano110 
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0680				        	; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%ThinkPadDeviceDesc% 		= ETD_DUALMODE_Inst, ACPI\LEN0040					; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+[ELAN.Mfg.NTamd64.6.3]
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0000
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0613						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060D						; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060E						; SmartPad for Pegatron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0623 						; SmartPad for LCFC S8442D-71H3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0624						; SmartPad for LCFC SA050D-77H5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062D						; v5.5 spec for Win7 (Z40-75) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062E						; v5.5 spec for Win7 (Z50-75) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD062F						; v5.5 spec for Win7 (ZIWBx14) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0630						; v5.5 spec for Win7 (ZIWBx 14/15) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0631						; v5.5 spec for Win7 (Wistron Carrera) v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0627
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0637						; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0657						; Nano110 
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0680						; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, *ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%ThinkPadDeviceDesc% 		= ETD_DUALMODE_Inst, *LEN0040						; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0613						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062F						; SmartPad for Compal v5.5 ZIWBx 14/ZIWBx 15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0630
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060D			    			; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060E						; SmartPad for Pegetron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0623						; SmartPad for LCFC S8442D-71H3 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062D
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0624						; SmartPad for LCFC SA050D-77H5 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062E
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0627						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0631
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0637 					; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0657						; Nano110
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0680						; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_Inst, ACPI\ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%ThinkPadDeviceDesc% 		= ETD_DUALMODE_Inst, ACPI\LEN0040					; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+[ELAN.Mfg.NTamd64.10.0]
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0606						; SmartPad for Lenovo
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0613						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0625
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0626
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD062F						; SmartPad for Compal v5.5 ZIWBx 14/ZIWBx 15
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0630
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0615						; ClickPad for Lenovo Z/Y/U/S Series
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0621
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0622
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0609
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0618						; SmartPad for Bitland N480
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0619						; ClickPad for Pegatron S Series(Base on 0615)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD060A						; ClickPad for U510
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD060B						; ClickPad for LC Y401/501
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD060D			    			; ClickPad for LC Venus2 SMBus+PS2, Vienna
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0620
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD060E						; SmartPad for Pegetron G700 (Base on 0605)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD060F						; ClickPad for Quanta
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD061A						; SmartPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD061B						; SmartPad for Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD061C						; ClickPad for LCFC Z series
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD061D						; Venus3
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD061E						; S410 Flex, S510 Flex
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD061F						; ClickPad for Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0623						; SmartPad for LCFC S8442D-71H3 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD062D
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD063F
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0641
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0624						; SmartPad for LCFC SA050D-77H5 v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD062E
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0640
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0642
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0643
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0627						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0631
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0628						; ClickPad for Wistron Flex/Carrera
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0629						; SmartPad for Bitland E10
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD062A						; SmartPad for Lenovo K series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD062B						; ClickPad for Compal Y40-80 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD062C						; M50W v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0632						; ClickPad for S435/M40-35 series v5.5
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0633						; ClickPad for LC41
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0634						; ClickPad for LT41
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0635						; ClickPad for Haydn
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0636						; ClickPad for LT41 (Tesla) NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0637 						; ClickPad for LT41 (Tesla) Non-NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0638						; ClickPad for LC41 (Camaro)NFC
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0639						; ClickPad for LM41 Wistron(ClickPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD063A						; LK41 Wistron(SmartPad)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD063B						; ClickPad for Flex3(Bitland)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD063C						; ClickPad for U31 Compal
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD063D						; ClickPad for Y15 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD063E						; ClickPad for S21-30 Bitland
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0644						; ClickPad for Y15 A+A
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0645						; ClickPad for Y17 I+N
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0650						; ClickPad for Y900-17(Gaming Y)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0651						; ClickPad for SS10-13
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0652						; SmartPad for LK21
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0653						; Yoga 510-14ISK;Yoga 510-15ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0654						; 310-17
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0655						; R310
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0656						; V310
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0657						; Nano110
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0658						; Nano110 IBR
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0659						; 310-ABR
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD065A						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD065B						; LV115SK
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD065C						; S510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD065D						; Yoga510-14AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD065E						; 100-17ACL(AMD)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD065F						; E41-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0660						; LV114A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0661						; LV115A(Apollalake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0662						; N22
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0663						; E41-10(Intel)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0664						; 310-14 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0665						; 310-15 APL
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0666						; BIUS4 Babel 4A-K (510s-14IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0667						; BIUS5 Babel 5A-K (510s-15IKB) Kaby Lake
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0668						; Ex2(LV8-14、LV9-15)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0669						; 510S-12ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD066A						; Gloria 710 14 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD066B						; Gloria 710 15 Intel Kabylake
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD066C						; 720s(Intel Skylake U)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD066D						; 310-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD066E						; 510-IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD066F						; 710S-13IKB (Intel Kabylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0646						; SmartPad for EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0647						; Clickpad for Compal Y700-14 ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0648						; Clickpad for Wistron JaguarM51 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0649						; Clickpad for Wistron Telsla
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD064A						; Clickpad for LCFC Haydn-S Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD064B						; SmartPad for LCFC AMD Beema
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD064C						; Clickpad for Wistron M51(Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD064D						; SmartPad for LCFC BelowG(Skylake) EASCS
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD064E						; SmartPad for 3Nod
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD064F						; Clickpad for Oslo
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0670						; SamrtPad for Wistron LK22(Intel Skylake)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0671						; ClickPad for LCFC Samui_510S-13lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0672						; ClickPad for LCFC Supra_Yoga-14lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0673						; ClickPad for LCFC Supra_Yoga-15lKB (yoga)
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0674						; SamrtPad for Compal Nano110-15
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0675						; SamrtPad for LCFC Nano110-17lKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0676						; SamrtPad for LCFC 110-14/15AST
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0677						; ClickPad for Compal 710s Plus(IntelKBL-U)CIZ00
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0678						; ClickPad for Wistron 700-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0679						; ClickPad for Wistron 700-17IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD067A						; SamrtPad for 3Nod N23 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD067B						; ClickPad for LCFC Y710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD067C						; SmartPad for LCFC Rescuer/IP710-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD067D						; SmartPad for LCFC Rescuer2-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD067E						; SmartPad for LCFC 110-14IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD067F						; SmartPad for LCFC 110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0680						; SmartPad for LCFC 110-17ISK/V110-17ISK
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0681						; SmartPad for LCFC Y520-15IKBA
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0682						; SmartPad for Wistron V110-15IKB
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0683						; SmartPad for 3Nod N24 Yoga
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0684						; SmartPad for Compal CIWP0_P1/Nano KBL
+%LenovoDeviceDesc% 		= ETD_LENOVO_WIN10_Inst, ACPI\ETD0685						; SmartPad for Compal CIWP0_P0/Nano KBL
+%LenovoDeviceDesc% 		= ETD_DUALMODE_WIN10_Inst, ACPI\LEN0040				    		; SmartPad Dual Mode for Japan Lenovo (Not Support Z)
+
+;----------------------------------------------------------------------------
+; Install Sections
+;----------------------------------------------------------------------------
+
+
+[DestinationDirs]
+DefaultDestDir 		= 12			; Driver directory
+ETDSys.CopyFiles 	= 12			; Driver directory
+ETDApp.CopyFiles 	= 16422, %TargetDir%	; Program file
+ETDAnimation.CopyFiles 	= 16422, %TargetDir%	; Program file
+ETDCoInstaller.CopyFiles = 11
+
+[ETD_Service_Inst]
+DisplayName    = %PS2DeviceDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 0                  ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %12%\ETD.sys
+LoadOrderGroup = Pointer Port
+
+;----------------------------------------------------------------------------
+; Common File Copy and Registry Operations
+;----------------------------------------------------------------------------
+
+[ETDSys.CopyFiles]
+ETD.sys,,,0x00000001
+
+[ETDCoInstaller.CopyFiles]
+ETDCoInstaller15015.dll,,,0x00002004
+
+[ETDApp.CopyFiles]
+ETD.inf,,,0x00004000
+ETDCtrl.exe,,,0x00004000
+ETDUninst.dll,,,0x00004000
+ETDUn_inst.exe,,,0x00004000
+ETDApi.dll,,,0x00004000
+ETDDeviceInformation.exe,,,0x00004000
+ETDApi32.dll,,,0x00004000
+ETD_DLL.dll,,,0x00004000
+ETDService.exe,,,0x00004000
+ETDCtrl.exe,,,0x00004000
+ETDCtrlHelper.exe,,,0x00004000
+ETDApix.dll,,,0x00004000
+ETDCmds.dll,,,0x00004000
+ETDMcpl.dll,,,0x00004000
+ETDFavorite.dll,,,0x00004000
+ETDTouch.exe,,,0x00004000
+ETDService.exe,,,0x00004000
+ETDAniConf.exe,,,0x00004000
+ETDIntelligent.exe,,,0x0004
+Lenovo.exe,,,0x00004000
+Lenovo_Win8.exe,,,0x00004000
+ETDTouch.exe,,,0x00004000
+LenovoAPI.dll,,,0x00004000
+ETDSMBus.ini,,,0x00004000
+ETDSMBus.sys,,,0x00004000
+TouchpadEnableDisable.exe,,,0x00004000
+WdfCoInstaller01011.dll,,,0x00004000
+
+[ETDAnimation.CopyFiles]
+Button_ClickPad.avi,,,0x0004
+Button_SmartPad.avi,,,0x0004
+DnD01.avi,,,0x0004
+DnD02.avi,,,0x0004
+DnD03.avi,,,0x0004
+Edge_Auto.avi,,,0x0004
+Edge_Inertial.avi,,,0x0004
+Edge_Scroll.avi,,,0x0004
+Rotation_Twist.avi,,,0x0004
+Rotation_Clockwise.avi,,,0x0004
+Scroll_Auto.avi,,,0x0004
+Scroll_Inertial.avi,,,0x0004
+Scroll_No_FreeScroll.avi,,,0x0004
+Swipe_3F_LR_PageupDown.avi,,,0x0004
+Tapping_1F.avi,,,0x0004
+Zooming.avi,,,0x0004
+Press_3F.avi,,,0x0004
+Continuous_EdgeScroll_H.avi,,,0x0004
+Continuous_EdgeScroll_V.avi,,,0x0004
+Continuous_Scroll_V_2F.avi,,,0x0004
+Continuous_Scroll_H_2F.avi,,,0x0004
+Scroll_Reverse_V.avi,,,0x0004
+Scroll_Reverse_H.avi,,,0x0004
+Edge_Reverse_V.avi,,,0x0004
+Edge_Reverse_H.avi,,,0x0004
+Win8EdgeSwipe_Left.avi,,,0x0004
+Win8EdgeSwipe_Right.avi,,,0x0004
+Win8EdgeSwipe_Top.avi,,,0x0004
+Continuous_EdgeScroll_Reverse-H.avi,,,0x0004
+Continuous_EdgeScroll_Reverse-V.avi,,,0x0004
+Continuous_Scroll_Reverse-H_2F.avi,,,0x0004
+Continuous_Scroll_Reverse-V_2F.avi,,,0x0004
+Edge_Auto_Reverse.avi,,,0x0004
+Edge_Inertial_Reverse.avi,,,0x0004
+Scroll_Auto_Reverse.avi,,,0x0004
+Scroll_Inertial_Reverse.avi,,,0x0004
+PTP_Swipe_3F_Up_Down_Left_Right.avi,,,0x0004
+PTP_Tapping_3F_Cortana.avi,,,0x0004
+PTP_Tapping_4F_Notification_Center.avi,,,0x0004
+ETDSetup.ini,,,0x00004000
+
+;----------------------------------------------------------------------------
+; PS/2 SmartPad
+;----------------------------------------------------------------------------
+[ETD_STD_Inst]
+FeatureScore=F9
+Include=msmouse.inf
+Needs=PS2_Inst
+CopyFiles=ETDSys.CopyFiles,\
+          ETDApp.CopyFiles,\
+          ETDAnimation.CopyFiles
+DelReg=RunETDCtrl_DelReg
+AddReg=ETD_System.AddReg
+
+[ETD_STD_Inst.Services]
+Include=msmouse.inf
+Needs=PS2_Inst.Services
+AddService = ETD,0x00000000, ETD_Service_Inst
+
+[ETD_STD_Inst.CoInstallers]
+AddReg    = ETDCoInstaller.AddReg
+CopyFiles = ETDCoInstaller.CopyFiles
+
+[ETD_STD_Inst.HW]
+AddReg = ETD_AddReg.HW
+
+;----------------------------------------------------------------------------
+; Dual Mode
+;----------------------------------------------------------------------------
+[ETD_DUALMODE_Inst]
+FeatureScore=F9
+Include=msmouse.inf
+Needs=PS2_Inst
+CopyFiles=ETDSys.CopyFiles,\
+          ETDApp.CopyFiles,\
+          ETDAnimation.CopyFiles
+DelReg=RunETDCtrl_DelReg
+AddReg=DualMode_System.AddReg
+
+[ETD_DUALMODE_Inst.Services]
+Include=msmouse.inf
+Needs=PS2_Inst.Services
+AddService = ETD,0x00000000, ETD_Service_Inst
+
+[ETD_DUALMODE_Inst.CoInstallers]
+AddReg    = ETDCoInstaller.AddReg
+CopyFiles = ETDCoInstaller.CopyFiles
+
+[ETD_DUALMODE_Inst.HW]
+AddReg = ETD_AddReg.HW
+[ETD_DUALMODE_WIN10_Inst]
+FeatureScore=F9
+Include=msmouse.inf
+Needs=PS2_Inst
+CopyFiles=ETDSys.CopyFiles,\
+          ETDApp.CopyFiles,\
+          ETDAnimation.CopyFiles
+
+DelReg=ProgramFeature_DelReg, RunETDCtrl_DelReg
+AddReg=DualMode_WIN10_System.AddReg
+[ETD_DUALMODE_WIN10_Inst.Services]
+Include=msmouse.inf
+Needs=PS2_Inst.Services
+AddService = ETD,0x00000000, ETD_Service_Inst
+
+[ETD_DUALMODE_WIN10_Inst.CoInstallers]
+AddReg    = ETDCoInstaller.AddReg
+CopyFiles = ETDCoInstaller.CopyFiles
+
+[ETD_DUALMODE_WIN10_Inst.HW]
+AddReg = ETD_AddReg.HW
+
+;----------------------------------------------------------------------------
+; Lenovo system
+;----------------------------------------------------------------------------
+[ETD_LENOVO_Inst]
+FeatureScore=F9
+Include=msmouse.inf
+Needs=PS2_Inst
+CopyFiles=ETDSys.CopyFiles,\
+          ETDApp.CopyFiles,\
+          ETDAnimation.CopyFiles
+DelReg=RunETDCtrl_DelReg
+AddReg=Lenovo_System.AddReg
+
+[ETD_LENOVO_Inst.Services]
+Include=msmouse.inf
+Needs=PS2_Inst.Services
+AddService = ETD,0x00000000, ETD_Service_Inst
+
+[ETD_LENOVO_Inst.CoInstallers]
+AddReg    = ETDCoInstaller.AddReg
+CopyFiles = ETDCoInstaller.CopyFiles
+
+[ETD_LENOVO_Inst.HW]
+AddReg = ETD_AddReg.HW
+
+;----------------------------------------------------------------------------
+[ETD_LENOVO_WIN10_Inst]
+FeatureScore=F9
+Include=msmouse.inf
+Needs=PS2_Inst
+CopyFiles=ETDSys.CopyFiles,\
+          ETDApp.CopyFiles,\
+          ETDAnimation.CopyFiles
+
+DelReg=ProgramFeature_DelReg, RunETDCtrl_DelReg
+AddReg=Lenovo_System_WIN10.AddReg
+
+[ETD_LENOVO_WIN10_Inst.Services]
+Include=msmouse.inf
+Needs=PS2_Inst.Services
+AddService = ETD,0x00000000, ETD_Service_Inst
+
+[ETD_LENOVO_WIN10_Inst.CoInstallers]
+AddReg    = ETDCoInstaller.AddReg
+CopyFiles = ETDCoInstaller.CopyFiles
+
+[ETD_LENOVO_WIN10_Inst.HW]
+AddReg = ETD_AddReg.HW
+
+;----------------------------------------------------------------------------
+[ETD_AddReg.HW]
+HKR,,"UpperFilters",0x00010000,"ETD"
+[ETDCoInstaller.AddReg]
+HKR,,CoInstallers32,0x10000,"ETDCoInstaller15015.dll,CoInstallerEntry"
+
+;----------------------------------------------------------------------------
+; Entry point for Uninstallation.
+; This section is executed as part of Uninstallation.
+;----------------------------------------------------------------------------
+
+[Uninstall]
+CopyFiles = No_Files
+DelFiles = No_Files
+DelReg = Uninstall_DelReg
+
+[No_Files]
+
+;----------------------------------------------------------------------------
+; Uninstall Section
+;----------------------------------------------------------------------------
+
+[Uninstall_DelReg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\ETD"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl
+HKLM,%ServiceRoot%"\Elantech
+;HKLM,%ServiceRoot%"\ETD
+HKCU,Software\Elantech
+
+;----------------------------------------------------------------------------
+; System Section
+;----------------------------------------------------------------------------
+
+[ETD_System.AddReg]
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDMcpl.dll"
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,ThreadingModel,%REG_SZ%,"Apartment"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0},%REG_SZ%,"ELAN Control Panel"
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\ETD",,%REG_SZ%,"{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+
+HKLM,%ServiceRoot%"\Elantech",InstallDir,%REG_SZ%,"%1%"
+HKLM,%ServiceRoot%"\Elantech",Version,%REG_SZ%,"%DriverVersion%"
+HKLM,%ServiceRoot%"\Elantech",DriverVersion,%REG_SZ%,"ELAN Touchpad %DriverVersion%_%DriverBit%_%DriverVersionExtend%"
+HKLM,%ServiceRoot%"\Elantech",ScreenOrientation,%REG_DWORD%,0
+
+; Windows\CurrentVersion\Uninstall
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayName,%REG_SZ%,"ELAN Touchpad %DriverVersion%_%DriverBit%_%DriverVersionExtend%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,UninstallString,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDUn_inst.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayVersion,%REG_SZ%,"%DriverVersion%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayIcon,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,Publisher,%REG_SZ%,%Publisher%
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,URLInfoAbout,%REG_SZ%,"www.emc.com.tw"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoModify,%REG_DWORD%,1
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoRepair,%REG_DWORD%,1
+
+[DualMode_System.AddReg]
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDMcpl.dll"
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,ThreadingModel,%REG_SZ%,"Apartment"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0},%REG_SZ%,"UltraNav"
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\ETD",,%REG_SZ%,"{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+
+HKLM,"%ServiceRoot%\Elantech",InstallDir,%REG_SZ%,"%1%"
+HKLM,"%ServiceRoot%\Elantech",Version,%REG_SZ%,"%DriverVersion%"
+HKLM,"%ServiceRoot%\Elantech",DriverVersion,%REG_SZ%,"ELAN Touchpad %DriverVersion%_%DriverBit%_%DriverVersionExtend%"
+HKLM,"%ServiceRoot%\Elantech",ScreenOrientation,%REG_DWORD%,0
+
+; Windows\CurrentVersion\Uninstall
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayName,%REG_SZ%,"%ThinkPadStringName%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,UninstallString,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDUn_inst.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayVersion,%REG_SZ%,"%DriverVersion%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayIcon,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,Publisher,%REG_SZ%,%Publisher%
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,URLInfoAbout,%REG_SZ%,"www.emc.com.tw"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoModify,%REG_DWORD%,1
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoRepair,%REG_DWORD%,1
+
+[DualMode_WIN10_System.AddReg]
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDMcpl.dll"
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,ThreadingModel,%REG_SZ%,"Apartment"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0},%REG_SZ%,"UltraNav"
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\ETD",,%REG_SZ%,"{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+
+HKLM,"%ServiceRoot%\Elantech",InstallDir,%REG_SZ%,"%1%"
+HKLM,"%ServiceRoot%\Elantech",Version,%REG_SZ%,"%DriverVersion%"
+HKLM,"%ServiceRoot%\Elantech",DriverVersion,%REG_SZ%,"ELAN Touchpad %DriverVersion%_%DriverBit%_%DriverVersionExtend%"
+HKLM,"%ServiceRoot%\Elantech",ScreenOrientation,%REG_DWORD%,0
+
+; Windows\CurrentVersion\Uninstall
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayName,%REG_SZ%,"%ELANProgamName%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,UninstallString,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDUn_inst.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayVersion,%REG_SZ%,"%DriverVersion%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayIcon,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,Publisher,%REG_SZ%,%Publisher%
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,URLInfoAbout,%REG_SZ%,"www.emc.com.tw"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoModify,%REG_DWORD%,1
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoRepair,%REG_DWORD%,1
+
+
+[Lenovo_System.AddReg]
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDMcpl.dll"
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,ThreadingModel,%REG_SZ%,"Apartment"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0},%REG_SZ%,"Lenovo"
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\ETD",,%REG_SZ%,"{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+
+HKLM,%ServiceRoot%"\Elantech",InstallDir,%REG_SZ%,"%1%"
+HKLM,%ServiceRoot%"\Elantech",Version,%REG_SZ%,"%DriverVersion%"
+HKLM,%ServiceRoot%"\Elantech",DriverVersion,%REG_SZ%,"ELAN Touchpad %DriverVersion%_%DriverBit%_%DriverVersionExtend%"
+HKLM,%ServiceRoot%"\Elantech",ScreenOrientation,%REG_DWORD%,0
+
+; Windows\CurrentVersion\Uninstall
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayName,%REG_SZ%,"%LenovoStringName%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,UninstallString,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDUn_inst.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayVersion,%REG_SZ%,"%DriverVersion%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,DisplayIcon,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,Publisher,%REG_SZ%,%Publisher%
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,URLInfoAbout,%REG_SZ%,"www.emc.com.tw"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoModify,%REG_DWORD%,1
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech,NoRepair,%REG_DWORD%,1
+[Lenovo_System_WIN10.AddReg]
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDMcpl.dll"
+HKCR,CLSID\{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}\InProcServer32,ThreadingModel,%REG_SZ%,"Apartment"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0},%REG_SZ%,"Lenovo"
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\ETD",,%REG_SZ%,"{0066D4B3-8DE0-4D08-AA83-EDD50E2431F0}"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl,%REG_EXPAND_SZ%,"%%ProgramFiles%%\%TargetDir%\ETDCtrl.exe"
+
+HKLM,%ServiceRoot%"\Elantech",InstallDir,%REG_SZ%,"%1%"
+HKLM,%ServiceRoot%"\Elantech",Version,%REG_SZ%,"%DriverVersion%"
+HKLM,%ServiceRoot%"\Elantech",DriverVersion,%REG_SZ%,"ELAN Touchpad %DriverVersion%_%DriverBit%_%DriverVersionExtend%"
+HKLM,%ServiceRoot%"\Elantech",ScreenOrientation,%REG_DWORD%,0
+
+[ProgramFeature_DelReg]
+; Windows\CurrentVersion\Uninstall
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Elantech
+
+[RunETDCtrl_DelReg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Run,ETDCtrl
+;----------------------------------------------------------------------------
+; String Table
+;----------------------------------------------------------------------------
+
+[Strings]
+PS2DeviceDesc 		= "ELAN PS/2 Port Input Device"
+;ELANDeviceDesc 	= "ELAN PS/2 Port Smart-Pad"
+ELANHIDDeviceDesc 	= "ELAN PS/2 Port HID Smart-Pad"
+ThinkPadDeviceDesc	= "ThinkPad UltraNav Pointing Device"
+;LenovoDeviceDesc	= "Lenovo pointing device"
+LenovoDeviceDesc	= "ELAN pointing device"
+Publisher 		= "ELAN Microelectronic Corp."
+TargetDir		= "Elantech"
+NewTargetDir		= "NewElantech"
+DiskName  		= "ETDWare Driver Disk"
+VenderName		= "ELAN"
+ServiceRoot 		= "System\CurrentControlSet\Control"
+
+; Registry Type
+REG_EXPAND_SZ		= 0x00020000 
+REG_DWORD		= 0x00010001 
+REG_MULTI_SZ		= 0x00010000
+REG_BINARY		= 0x00000001
+REG_SZ			= 0x00000000
+
+; ELAN Driver Information
+ELANStringName		= "ELAN Input Device Driver"
+ThinkPadStringName	= "ThinkPad UltraNav Driver"
+ThinkPadStringNameNew	= "ELAN pointing device"
+;LenovoStringName	= "Lenovo pointing device"
+LenovoStringName 	= "ELAN pointing device"
+ELANProgamName		= "ELAN Pointing Driver"
+DriverDate		= "03/08/2017"
+DriverVersion		= "11.4.104.3"
+DriverBit		= "X64"
+DriverVersionExtend	= "WHQL"        ; Beta or WHQL
+ 

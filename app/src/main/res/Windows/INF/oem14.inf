@@ -1,0 +1,237 @@
+;============================================================================ 
+; ETDSMBus.inf Installation file (.inf) for Windows 7/8/8.1/10.
+;
+; All Rights Reserved, Copyright(C) ELAN Microelectronics Corp. 2003-2015
+;============================================================================
+
+[Version]
+Signature="$Windows NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%VenderName%
+CatalogFile=ETD.cat
+DriverVer=11/07/2016, 15.6.0.4
+
+[SourceDisksNames]
+1=%DiskName%,,
+
+[SourceDisksFiles]
+ETDSMBus.sys = 1
+WdfCoInstaller01011.dll = 1
+TouchpadEnableDisable.exe = 1
+
+;----------------------------------------------------------------------------
+; Manufacturer Sections
+;----------------------------------------------------------------------------
+
+[Manufacturer]
+%VenderName%   = ELANMfg, NTamd64, NTamd64.6.2
+
+[ELANMfg.NTamd64]
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_1C22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_1E22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_2930&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_3B30&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_8C22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_9C22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_9CA2&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_0F12&CC_0C05
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_9D23&CC_0C05  ; SkyLake platform
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_A123&CC_0C05  ; SkyLake platform newest
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_2292&CC_0C05
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_23B0&CC_0C05  ; Coleto Creek PCH
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8CA2&CC_0C05  ; Wildcat Point LP SMBus Controller
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D22&CC_0C05  ; Wellsburg PCH
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D7D&CC_0C05  ; Wellsburg PCH MS
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D7E&CC_0C05  ; Wellsburg PCH MS
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D7F&CC_0C05  ; Wellsburg PCH MS
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst_AMD_Channel1, *SMB0001
+
+[ELANMfg.NTamd64.6.2]
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_1C22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_1E22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_2930&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_3B30&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_8C22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_9C22&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_9CA2&CC_0C05
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_0F12&CC_0C05
+%ELANSMBusDeviceDesc%      	= ETDSMBus_Inst, PCI\VEN_8086&DEV_9D23&CC_0C05  ; SkyLake platform
+%ELANSMBusDeviceDesc%      	= ETDSMBus_Inst, PCI\VEN_8086&DEV_A123&CC_0C05  ; SkyLake platform newest
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst, PCI\VEN_8086&DEV_2292&CC_0C05
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_23B0&CC_0C05  ; Coleto Creek PCH
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8CA2&CC_0C05  ; Wildcat Point LP SMBus Controller
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D22&CC_0C05  ; Wellsburg PCH
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D7D&CC_0C05  ; Wellsburg PCH MS
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D7E&CC_0C05  ; Wellsburg PCH MS
+%ELANSMBusDeviceDesc%       	= ETDSMBus_Inst, PCI\VEN_8086&DEV_8D7F&CC_0C05  ; Wellsburg PCH MS
+%ELANSMBusDeviceDesc% 		= ETDSMBus_Inst_AMD_Channel1, *SMB0001
+
+;----------------------------------------------------------------------------
+; Install Sections
+;----------------------------------------------------------------------------
+
+[DestinationDirs]
+CopyFiles_Drivers	= 12			; Driver directory
+CopyFiles_ETDApp 	= 16422, %TargetDir%	; Program file
+CopyFiles_CoInstaller 	= 11			; System directory
+
+[CopyFiles_Drivers]
+ETDSMBus.sys,,,0x00000001
+
+[CopyFiles_ETDApp]
+TouchpadEnableDisable.exe,,,0x00000001
+
+[CopyFiles_CoInstaller]
+WdfCoInstaller01011.dll,,,0x00000001
+
+;----------------------------------------------------------------------------
+[ETDSMBus_Inst]
+FeatureScore=80
+CopyFiles=CopyFiles_Drivers,\
+	  CopyFiles_ETDApp
+
+AddReg=ETDSMBus_Addreg
+
+[ETDSMBus_Inst.Services]
+AddService = ETDSMBus,%SPSVCINST_ASSOCSERVICE%,ETDSMBus_Service_Inst
+
+[ETDSMBus_Inst.CoInstallers]
+CopyFiles = CopyFiles_CoInstaller
+AddReg = ETDSMBus_Inst.CoInstallers_AddReg
+
+[ETDSMBus_Inst.Wdf]
+KmdfService = ETDSMBus, SMBusDevice_WdfSect
+
+[ETDSMBus_Inst.CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01011.dll,WdfCoInstaller"
+
+;----------------------------------------------------------------------------
+[ETDSMBus_Inst_AMD_Channel1]
+FeatureScore=80
+CopyFiles=CopyFiles_Drivers,\
+	  CopyFiles_ETDApp
+
+AddReg=ETDSMBus_AMD_Channel1_Addreg
+
+[ETDSMBus_Inst_AMD_Channel1.Services]
+AddService = ETDSMBus,%SPSVCINST_ASSOCSERVICE%,ETDSMBus_Service_Inst
+
+[ETDSMBus_Inst_AMD_Channel1.CoInstallers]
+CopyFiles = CopyFiles_CoInstaller
+AddReg = ETDSMBus_Inst_AMD_Channel1.CoInstallers_AddReg
+
+[ETDSMBus_Inst_AMD_Channel1.Wdf]
+KmdfService = ETDSMBus, SMBusDevice_WdfSect
+
+[ETDSMBus_Inst_AMD_Channel1.CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01011.dll,WdfCoInstaller"
+
+;----------------------------------------------------------------------------
+
+[SMBusDevice_WdfSect]
+KmdfLibraryVersion = 1.11
+
+;----------------------------------------------------------------------------
+
+[ETDSMBus_Addreg]
+HKLM,%ServiceRoot%\Elantech\SMBus,InstallDir,%REG_SZ%,"%1%"
+HKLM,%ServiceRoot%\Elantech\SMBus,DriverVersion,%REG_SZ%,%DriverVersion%
+HKLM,%ServiceRoot%\Elantech\SMBus,SMBus_Vendor_Type,%REG_DWORD%,0		; 0 = Intel, 1 = AMD
+HKLM,%ServiceRoot%\Elantech\SMBus,AMD_SMBus_Channel_Number,%REG_DWORD%,2	; 0 = Channel0, 1 = Channel1, 2 = From HW Resource
+
+[ETDSMBus_AMD_Channel1_Addreg]
+HKLM,%ServiceRoot%\Elantech\SMBus,InstallDir,%REG_SZ%,"%1%"
+HKLM,%ServiceRoot%\Elantech\SMBus,DriverVersion,%REG_SZ%,%DriverVersion%
+HKLM,%ServiceRoot%\Elantech\SMBus,SMBus_Vendor_Type,%REG_DWORD%,1		; 0 = Intel, 1 = AMD
+HKLM,%ServiceRoot%\Elantech\SMBus,AMD_SMBus_Channel_Number,%REG_DWORD%,1	; 0 = Channel0, 1 = Channel1, 2 = From HW Resource
+
+;----------------------------------------------------------------------------
+; Entry point for uninstallation.
+; This section is executed as part of uninstallation.
+;----------------------------------------------------------------------------
+[UnInstall]
+CopyFiles = No_Files
+DelFiles = CopyFiles_Drivers
+DelReg = Uninstall_DelReg
+
+[No_Files]
+
+;----------------------------------------------------------------------------
+; Uninstall Section
+;----------------------------------------------------------------------------
+
+[Uninstall_DelReg]
+HKLM,%ServiceRoot%\Elantech\SMBus
+
+;----------------------------------------------------------------------------
+; Services Sections
+;----------------------------------------------------------------------------
+
+[ETDSMBus_Service_Inst]
+ServiceType   	= %SERVICE_KERNEL_DRIVER%
+StartType     	= %SERVICE_DEMAND_START%
+ErrorControl  	= %SERVICE_ERROR_NORMAL%
+LoadOrderGroup 	= "Base"
+ServiceBinary 	= %12%\ETDSMBus.sys 
+
+;----------------------------------------------------------------------------
+; User visible strings
+;----------------------------------------------------------------------------
+[Strings]
+ELANSMBusDeviceDesc	= "ELAN SMBus Driver"
+
+Publisher 		= "ELAN Microelectronic Corp."
+TargetDir		= "Elantech"
+DiskName  		= "ELAN SMBus Driver Installation Disk"
+VenderName		= "ELAN SMBus"
+ServiceRoot 		= "System\CurrentControlSet\Control"
+
+; Registry Type
+REG_EXPAND_SZ		= 0x00020000 
+REG_DWORD		= 0x00010001 
+REG_MULTI_SZ		= 0x00010000
+REG_BINARY		= 0x00000001
+REG_SZ			= 0x00000000
+
+
+; The "standard" defines
+
+SPSVCINST_TAGTOFRONT               = 0x00000001
+SPSVCINST_ASSOCSERVICE             = 0x00000002
+SPSVCINST_DELETEEVENTLOGENTRY      = 0x00000004
+SPSVCINST_NOCLOBBER_DISPLAYNAME    = 0x00000008
+SPSVCINST_NOCLOBBER_STARTTYPE      = 0x00000010
+SPSVCINST_NOCLOBBER_ERRORCONTROL   = 0x00000020
+SPSVCINST_NOCLOBBER_LOADORDERGROUP = 0x00000040
+SPSVCINST_NOCLOBBER_DEPENDENCIES   = 0x00000080
+SPSVCINST_NOCLOBBER_DESCRIPTION    = 0x00000100
+
+COPYFLG_WARN_IF_SKIP         = 0x00000001
+COPYFLG_NOSKIP               = 0x00000002
+COPYFLG_NOVERSIONCHECK       = 0x00000004
+COPYFLG_FORCE_FILE_IN_USE    = 0x00000008
+COPYFLG_NO_OVERWRITE         = 0x00000010
+COPYFLG_NO_VERSION_DIALOG    = 0x00000020
+COPYFLG_OVERWRITE_OLDER_ONLY = 0x00000040
+COPYFLG_REPLACEONLY          = 0x00000400
+COPYFLG_REPLACE_BOOT_FILE    = 0x00001000
+COPYFLG_NOPRUNE              = 0x00002000
+
+SERVICE_KERNEL_DRIVER      = 0x00000001
+SERVICE_FILE_SYSTEM_DRIVER = 0x00000002
+
+SERVICE_BOOT_START   = 0x00000000
+SERVICE_SYSTEM_START = 0x00000001
+SERVICE_AUTO_START   = 0x00000002
+SERVICE_DEMAND_START = 0x00000003
+SERVICE_DISABLED     = 0x00000004
+
+SERVICE_ERROR_IGNORE   = 0x00000000
+SERVICE_ERROR_NORMAL   = 0x00000001
+SERVICE_ERROR_SEVERE   = 0x00000002
+SERVICE_ERROR_CRITICAL = 0x00000003
+
+; ELAN Driver Information
+DriverDate		= "11/07/2016"
+DriverVersion		= "15.6.0.4"

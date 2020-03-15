@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">IntroSliderTutorial</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="got_it">GOT IT</string>
+    <string name="welcome">Welcome to Easyliving</string>
+    <string name="slide1_desc">A platform where you will get the best accommodation at an believable price.</string>
+    <string name="slide1_title">Welcome to easyliving.com</string>
+    <string name="slide2_desc">Experience the move.</string>
+    <string name="slide2_title">Travel safely with us</string>
+    <string name="slide3_desc">Experience  great travel .</string>
+    <string name="slide3_title">Experience the luxury</string>
+    <string name="slide4_desc">Get some more interesting things  :)</string>
+    <string name="slide4_title">Want some more interesting stuffs?</string>
+
+    <string name="get_started">Get Started</string>
+    <string name="check_it_out">Check It Out</string>
+
+</resources>

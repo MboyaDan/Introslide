@@ -1,0 +1,70 @@
+; Windows Virtual Serial Port Setup File
+; Copyright (c) 2008 ZTE Incorporated
+; Manufacturer: ZTE Incorporated
+;
+;This INF file installs a virtual COM port on 32-bit and 64-bit Windows OS, such as Windows 2000, Windows XP and Vista.
+
+[Version]
+signature  = "$WINDOWS NT$"
+Class      = Ports
+Provider   = %ZTE%
+ClassGuid  = {4D36E978-E325-11CE-BFC1-08002BE10318}
+DriverVer     = 07/23/2010,1.2074.0.2
+CatalogFile = ZTEusbdvbh.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[SourceDisksNames]
+1000 = %ZTESRCDISK%,,,""
+
+[SourceDisksFiles]
+ZTEusbdvbh.sys = 1000,,
+
+[DestinationDirs]
+DefaultDestDir = 12
+ZTEportInstall.NT.Copy=12
+
+[Manufacturer]
+%ZTE% = ZTEcomSerialPort, NTamd64
+
+[ZTEcomSerialPort]
+;zte's driver to dvbh's interface vid&pid&mi
+%ZTEDevice0061%   = ZTEportInstall, USB\VID_19D2&PID_0061&MI_04
+%ZTEDevice0086%   = ZTEportInstall, USB\VID_19D2&PID_0086&MI_04
+
+[ZTEcomSerialPort.NTamd64]
+;zte's driver to dvbh's interface vid&pid&mi
+%ZTEDevice0061%   = ZTEportInstall, USB\VID_19D2&PID_0061&MI_04
+%ZTEDevice0086%   = ZTEportInstall, USB\VID_19D2&PID_0086&MI_04
+
+[ZTEportInstall.NT]
+CopyFiles=ZTEportInstall.NT.Copy
+AddReg = All, AddReg.NT
+
+[ZTEportInstall.NT.Copy]
+ZTEusbdvbh.sys
+
+[ZTEportInstall.NT.Services]
+AddService = ZTEusbdvbh, 0x00000002, ZTEport_Service_Inst
+
+[ZTEport_Service_Inst]
+DisplayName   = %ZTEcomSerialPortName%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\ZTEusbdvbh.sys
+
+[All]
+HKR,,NTMPDriver,,ZTEusbdvbh.sys
+
+[AddReg.NT]
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[Strings]
+ZTE                      = "ZTE Corporation"
+ZTESRCDISK               = "ZTE Multimedia USB COM Driver Disk"
+ZTEDevice0061            = "ZTE HS-USB DVBH-RF Device"
+ZTEDevice0086            = "ZTE HS-USB DVBH-RF Device"
+ZTEcomSerialPortName     = "ZTE HS-USB DVBH Service"

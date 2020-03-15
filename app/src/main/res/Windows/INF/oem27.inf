@@ -1,0 +1,300 @@
+; Installation inf for the Siano Mobile Silicon Devices
+;
+; Copyright (C) Siano Mobile Silicon, 2004 - 2007  All Rights Reserved.
+;
+
+[Version]
+signature="$Windows NT$"
+Class=MEDIA
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider=%Sms%
+DriverVer=12/02/2009,4.2.24.0
+CatalogFile=smsbda.cat
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%Sms%=Siano,NTx86,NTamd64
+
+[Siano]
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0058&MI_06
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0061&MI_05
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0078&MI_06
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0086&MI_05
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0106&MI_05
+
+
+[Siano.NTx86]
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0058&MI_06
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0061&MI_05
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0078&MI_06
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0086&MI_05
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0106&MI_05
+
+
+[Siano.NTamd64]
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0058&MI_06
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0061&MI_05
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0078&MI_06
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0086&MI_05
+%smsbda.name%=smsbda2.1,USB\VID_19D2&PID_0106&MI_05
+
+
+[smsbda1.NT]
+Include=ks.inf,kscaptur.inf,bda.inf
+Needs=KS.Registration.NT,KSCAPTUR.Registration.NT,BDA.Installation.NT
+CopyFiles=smsbda.files
+
+[smsbda1.NT.HW]
+AddReg=smsbda1.addreg
+
+[smsbda1.addreg]
+HKR,,"Cfg",0x00010001,1
+HKR,,"HostLibIpSink",0x00010001,1
+
+[smsrom1.NT]
+Include=bda.inf
+CopyFiles=smsbda.files,BdaDriver.Files
+
+[smsrom1.NT.HW]
+AddReg=smsbda1.addreg
+
+[smsbda2.NT]
+Include=ks.inf,kscaptur.inf,bda.inf
+Needs=KS.Registration.NT,KSCAPTUR.Registration.NT,BDA.Installation.NT
+CopyFiles=smsbda.files
+AddReg=smsprops.addreg
+
+[smsbda2.NT.HW]
+AddReg=smsbda2.addreg
+
+[smsbda2.addreg]
+HKR,,"Cfg",0x00010001,2
+KR,,"ImageFile0",,"C:\Program Files\ISDBT_Assist_Driver\dvb_nova_12mhz_b0.inp"
+HKR,,"ImageFile1",,"C:\Program Files\ISDBT_Assist_Driver\dvb_nova_12mhz_b0.inp"
+HKR,,"ImageFile2",,"C:\Program Files\ISDBT_Assist_Driver\tdmb_nova_12mhz_b0.inp"
+HKR,,"ImageFile4",,"C:\Program Files\ISDBT_Assist_Driver\dvb_nova_12mhz_b0.inp"
+HKR,,"ImageFile5",,"C:\Program Files\ISDBT_Assist_Driver\isdbt_nova_12mhz_b0.inp"
+HKR,,"ImageFile6",,"C:\Program Files\ISDBT_Assist_Driver\isdbt_nova_12mhz_b0.inp"
+HKR,,"ImageFile8",,""
+HKR,,"Mode",0x00010001,6
+HKR,,"NdisIpSink",0x00010001,1
+
+[smsbda2.1.NT]
+Include=ks.inf,kscaptur.inf,bda.inf
+Needs=KS.Registration.NT,KSCAPTUR.Registration.NT,BDA.Installation.NT
+CopyFiles=smsbda.files
+AddReg=smsprops.addreg
+
+[smsbda2.1.NT.HW]
+AddReg=smsbda2.1.addreg
+
+[smsbda2.1.addreg]
+HKR,,"Cfg",0x00010001,2
+HKR,,"ImageFile0",,"C:\Program Files\ISDBT_Assist_Driver\dvb_nova_12mhz_b0.inp"
+HKR,,"ImageFile1",,"C:\Program Files\ISDBT_Assist_Driver\dvb_nova_12mhz_b0.inp"
+HKR,,"ImageFile2",,"C:\Program Files\ISDBT_Assist_Driver\tdmb_nova_12mhz.inp"
+HKR,,"ImageFile4",,"C:\Program Files\ISDBT_Assist_Driver\dvb_nova_12mhz_b0.inp"
+HKR,,"ImageFile5",,"C:\Program Files\ISDBT_Assist_Driver\isdbt_nova_12mhz_b0.inp"
+HKR,,"ImageFile6",,"C:\Program Files\ISDBT_Assist_Driver\isdbt_nova_12mhz_b0.inp"
+HKR,,"ImageFile8",,""
+HKR,,"Mode",0x00010001,6
+HKR,,"NdisIpSink",0x00010001,1
+
+[smsbda3.NT]
+Include=ks.inf,kscaptur.inf,bda.inf
+Needs=KS.Registration.NT,KSCAPTUR.Registration.NT,BDA.Installation.NT
+CopyFiles=smsbda.files
+AddReg=smsprops.addreg
+
+[smsbda3.NT.HW]
+AddReg=smsbda3.addreg
+
+[smsbda3.addreg]
+HKR,,"Cfg",0x00010001,2
+HKR,,"ImageFile7",,"\systemroot\system32\drivers\cmmb_vega_12mhz.inp"
+HKR,,"Mode",0x00010001,7
+
+[smsbda3.1.NT]
+Include=ks.inf,kscaptur.inf,bda.inf
+Needs=KS.Registration.NT,KSCAPTUR.Registration.NT,BDA.Installation.NT
+CopyFiles=smsbda.files,smsprops.files
+AddReg=smsprops.addreg
+
+[smsbda3.1.NT.HW]
+AddReg=smsbda3.1.addreg
+
+[smsbda3.1.addreg]
+HKR,,"Cfg",0x00010001,2
+HKR,,"ImageFile7",,"\systemroot\system32\drivers\cmmb_venice_12mhz.inp"
+HKR,,"Mode",0x00010001,7
+
+[smsbda3.2.NT]
+Include=ks.inf,kscaptur.inf,bda.inf
+Needs=KS.Registration.NT,KSCAPTUR.Registration.NT,BDA.Installation.NT
+CopyFiles=smsbda.files,smsprops.files
+AddReg=smsprops.addreg
+
+[smsbda3.2.NT.HW]
+AddReg=smsbda3.2.addreg
+
+[smsbda3.2.addreg]
+HKR,,"Cfg",0x00010001,2
+HKR,,"ImageFile7",,"\systemroot\system32\drivers\cmmb_venice_12mhz.inp"
+HKR,,"Mode",0x00010001,7
+
+[smsprops.addreg]
+HKR,,EnumPropPages32,,"smsprops.dll,SmsPropPageProvider"
+
+[smsbda.files]
+smsbda.sys
+
+[smsprops.files]
+smsprops.dll
+
+[DestinationDirs]
+smsbda.files=10,system32\drivers
+smsprops.files=11
+
+[SourceDisksFiles]
+smsbda.sys = 123
+smsprops.dll = 123
+
+[SourceDisksNames.x86]
+123=%Disk_Description%,,,\i386
+
+[SourceDisksNames.amd64]
+123=%Disk_Description%,,,\amd64
+
+[smsbda1.NT.Interfaces]
+AddInterface = %KSCATEGORY_BDATUNER%, %smsprimarytuner.guid%, smsprimarytuner
+AddInterface = %KSCATEGORY_BDARECEIVER%, %smsbdacapture.guid%, smsbdacapture
+AddInterface = %KSCATEGORY_CAPTURE%, %smscapture.guid%, smscapture
+AddInterface = %KSCATEGORY_VIDEO%, %smscapture.guid%, smscapture
+
+[smsbda2.NT.Interfaces]
+AddInterface = %KSCATEGORY_BDATUNER%, %smsprimarytuner.guid%, smsprimarytuner
+AddInterface = %KSCATEGORY_BDATUNER%, %smssecondarytuner.guid%, smssecondarytuner
+AddInterface = %KSCATEGORY_BDARECEIVER%, %smsbdacapture.guid%, smsbdacapture
+AddInterface = %KSCATEGORY_CAPTURE%, %smscapture.guid%, smscapture
+AddInterface = %KSCATEGORY_VIDEO%, %smscapture.guid%, smscapture
+
+[smsbda2.1.NT.Interfaces]
+AddInterface = %KSCATEGORY_BDATUNER%, %smsprimarytuner.guid%, smsprimarytuner
+AddInterface = %KSCATEGORY_BDATUNER%, %smssecondarytuner.guid%, smssecondarytuner
+AddInterface = %KSCATEGORY_BDARECEIVER%, %smsbdacapture.guid%, smsbdacapture
+AddInterface = %KSCATEGORY_CAPTURE%, %smscapture.guid%, smscapture
+AddInterface = %KSCATEGORY_VIDEO%, %smscapture.guid%, smscapture
+
+[smsbda3.NT.Interfaces]
+AddInterface = %KSCATEGORY_BDATUNER%, %smsprimarytuner.guid%, smsprimarytuner
+AddInterface = %KSCATEGORY_BDATUNER%, %smssecondarytuner.guid%, smssecondarytuner
+AddInterface = %KSCATEGORY_BDARECEIVER%, %smsbdacapture.guid%, smsbdacapture
+AddInterface = %KSCATEGORY_CAPTURE%, %smscapture.guid%, smscapture
+AddInterface = %KSCATEGORY_VIDEO%, %smscapture.guid%, smscapture
+
+[smsbda3.1.NT.Interfaces]
+AddInterface = %KSCATEGORY_BDATUNER%, %smsprimarytuner.guid%, smsprimarytuner
+AddInterface = %KSCATEGORY_BDATUNER%, %smssecondarytuner.guid%, smssecondarytuner
+AddInterface = %KSCATEGORY_BDARECEIVER%, %smsbdacapture.guid%, smsbdacapture
+AddInterface = %KSCATEGORY_CAPTURE%, %smscapture.guid%, smscapture
+AddInterface = %KSCATEGORY_VIDEO%, %smscapture.guid%, smscapture
+
+[smsbda3.2.NT.Interfaces]
+AddInterface = %KSCATEGORY_BDATUNER%, %smsprimarytuner.guid%, smsprimarytuner
+AddInterface = %KSCATEGORY_BDATUNER%, %smssecondarytuner.guid%, smssecondarytuner
+AddInterface = %KSCATEGORY_BDARECEIVER%, %smsbdacapture.guid%, smsbdacapture
+AddInterface = %KSCATEGORY_CAPTURE%, %smscapture.guid%, smscapture
+AddInterface = %KSCATEGORY_VIDEO%, %smscapture.guid%, smscapture
+
+[smsprimarytuner]
+AddReg = smsprimarytuner.AddReg
+
+[smsprimarytuner.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%smsprimarytuner.name%
+
+[smssecondarytuner]
+AddReg = smssecondarytuner.AddReg
+
+[smssecondarytuner.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%smssecondarytuner.name%
+
+[smsbdacapture]
+AddReg = smsbdacapture.AddReg
+
+[smsbdacapture.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%smsbdacapture.name%
+
+[smscapture]
+AddReg = smscapture.AddReg
+
+[smscapture.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%smscapture.name%
+
+[smsbda1.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsrom1.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsbda2.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsbda2.1.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsbda3.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsbda3.1.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsbda3.2.NT.Services]
+AddService=smsbda, 0x00000002, smsbda.ServiceInstall
+
+[smsbda.ServiceInstall]
+DisplayName=%smsbda.name%
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%10%\system32\drivers\smsbda.sys
+LoadOrderGroup=ExtendedBase
+
+[Strings]
+
+;----------------
+; non-localizeable
+;----------------
+
+SERVICE_KERNEL_DRIVER=1
+SERVICE_DEMAND_START=3
+SERVICE_ERROR_NORMAL=1
+
+Proxy.CLSID="{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+KSCATEGORY_BDARECEIVER="{FD0A5AF4-B41D-11d2-9C95-00C04F7971E0}"
+KSCATEGORY_BDATUNER="{71985F48-1CA1-11d3-9CC8-00C04F7971E0}"
+KSCATEGORY_CAPTURE="{65E8773D-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_VIDEO="{6994AD05-93EF-11D0-A3CC-00A0C9223196}"
+
+smsprimarytuner.guid="{76594675-42D1-46df-8478-6D38B6F6E5F1}"
+smssecondarytuner.guid="{76594676-42D1-46df-8478-6D38B6F6E5F1}"
+smsbdacapture.guid="{15D16EC1-E0A8-4de2-ABE3-55C86EE92EA7}"
+smscapture.guid="{15D16EC2-E0A8-4de2-ABE3-55C86EE92EA7}"
+
+;----------------
+; localizeable
+;----------------
+
+Sms="Siano Mobile Silicon"
+smsbda.name="SMS Digital Video"
+smsrom.name="SMS Digital Video (ROM)"
+smsprimarytuner.name="Siano BDA Tuner Filter"
+smssecondarytuner.name="Siano Secondary Tuner Filter"
+smsbdacapture.name="Bda Capture Filter"
+smscapture.name="TS Capture Filter"
+Disk_Description="SMS Installation Disk"
